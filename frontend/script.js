@@ -11,7 +11,7 @@ async function uploadImage() {
     form.append("file", file);
 
     try {
-        const res = await fetch("https://your-backend.onrender.com/predict", {
+        const res = await fetch("https://pneumoclassify.onrender.com/predict", {
             method: "POST",
             body: form
         });
