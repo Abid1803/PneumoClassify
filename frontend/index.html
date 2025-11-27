@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pneumonia Classifier</title>
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
+
+    <!-- JetBrains Mono Font -->
+    <link href="https://fonts.cdnfonts.com/css/jetbrains-mono-2" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --border-color: #ccc;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            padding-top: 5px;
+            padding-bottom: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            background: #f6f6f6;
+            width: 100%;
+            font-family: inherit;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #result {
+            margin-top: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            text-align: left;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        footer a {
+            text-decoration: underline;
+            color: #000000;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1 class="container">Pneumonia Classifier</h1>
+
+    <div class="container">
+        <h2>Upload a Chest X-Ray Image</h2>
+        <input type="file" id="fileInput" accept="image/*">
+        <button onclick="uploadImage()">Predict</button>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- Load external JS file -->
+    <script src="script.js"></script>
+
+    <footer>
+        <a href="https://maxepoch.netlify.app">← By @ Mohammad Abid (maxEpoch)</a>
+    </footer>
+
+</body>
+</html>
